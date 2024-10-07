@@ -1,0 +1,52 @@
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: #F5F5F2;
+}
+
+h1 {
+    color: #F26835;
+}
+
+p {
+    font-size: large;
+}
+.heading {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#navbar {
+    width: 100%;
+    background-color: #354EF2;
+    padding: 10px;
+    table-layout: fixed;
+}
+
+#navbar th {
+    width: 33%; /* Adjust this value based on the number of columns */
+    text-align: center;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+a:link {
+    color: #595958;
+}
+
+a:visited {
+    color: #F26835;
+}
+
+a:hover {
+    color: #354EF2;
+}
