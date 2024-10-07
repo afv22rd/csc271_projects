@@ -10,10 +10,15 @@ h1 {
 p {
     font-size: large;
 }
+
 .heading {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.heading img{
+    width: 20%;
 }
 
 .navbar-container {
