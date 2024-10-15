@@ -32,13 +32,13 @@
                       </a>
                     </li>
                     <li>
-                      <a href="./sell.html" class="nav-link ">
+                      <a href="./sell.html" class="nav-link active">
                         <img class="bi d-block mx-auto mb-1" src="./images/sell.png" width="30" alt="sell icon">
                         Sell
                       </a>
                     </li>
                     <li>
-                      <a href="./about.html" class="nav-link active">
+                      <a href="./about.html" class="nav-link">
                         <img class="bi d-block mx-auto mb-1" src="./images/about.png" width="30" alt="about icon">
                         About Us
                       </a>
@@ -61,61 +61,84 @@
               </div>
             </div>
         </header>
-        <!-- About jumbotron -->
-        <section id="about">
-            <div class="mb-5">
-                <div class="p-5 text-center bg-body-tertiary">
-                  <div class="container py-5">
-                    <h1 class="text-body-emphasis">Discover Your Perfect Vehicle!</h1>
-                    <p class="col-lg-8 mx-auto lead">
-                        Welcome to the first online car dealership in the Dominican Republic, where your ideal vehicle is just a click away! We offer a seamless experience for buying and selling cars, all from the comfort of your home. Explore our extensive selection, receive personalized offers, and complete transactions effortlessly. Join us in transforming the way you buy and sell vehicles in the Dominican Republic!
-                    </p>
+        <!-- Main hero -->
+        <section class="bg-body-tertiary">
+          <div class="container col-xxl-8 px-4 py-5 mb-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="./images/sell-hero.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">You will receive the best offer for your vehicle!</h1>
+                <p class="lead">Ready to sell? We make it simple and rewarding to get top dollar for your vehicle. Receive competitive offers quickly, with no hassle, and drive toward your next adventure.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Sell now</button>
+                  <a href="#sell-options">
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">How does it work?</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Sell options -->
+        <section id="sell-options">
+          <div class="container py-3">
+            <h2 class="border-bottom pb-2">How To Sell</h2>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center py-5">
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Sell To Us</h4>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title pricing-card-title">Instant Offers, Zero Fees</h3>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Best offer guaranteed.</li>
+                      <li>Submit your vehicle details online in minutes.</li>
+                      <li>Get your offer quickly and easily.</li>
+                      <li>No commitment to sell.</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">Receive offer</button>
                   </div>
                 </div>
               </div>
-        </section>
-        <!-- Contact -->
-        <section>
-            <div class="container col-12 px-4 pt-4 mt-3 position-relative">
-                <h2 class="border-bottom pb-2">Contact Us</h2>
-                <div class="d-flex flex-column flex-lg-row py-md-5 py-4 gap-4 gap-xl-0 align-items-center">
-                    <div class="col-12 col-lg-6 image-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7932728912733!2d-69.81940639999999!3d18.493020899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf87e791a264f5%3A0x99052b78f5bec6!2sBRAWA%20AUTOIMPORT%20SRL!5e0!3m2!1sen!2sus!4v1728937553969!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="order-first order-lg-last col-12 col-lg-6 ps-0 ps-lg-5">
-                        <p id="hours-heading" class="fw-bold fs-6 text-center py-2 px-3 mt-0">Hours of operation</p>
-                        <div class="list-group d-grid gap-2 border-0 lots-list">
-                            <li class="list-group-item d-flex justify-content-between align-items-center lot">
-                                Monday - Friday
-                                <span class="badge text-bg-primary rounded-pill lot-number flagg-badge">9 AM - 6 PM</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center lot">
-                                Saturday
-                                <span class="badge text-bg-primary rounded-pill lot-number">9 AM - 2 PM</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center lot">
-                                Sunday
-                                <span class="badge rounded-pill lot-number closed">CLOSED</span>
-                            </li>
-                        </div>
-                        <p id="hours-heading" class="fw-bold fs-6 text-center py-2 px-3 mt-3">Contact</p>
-                        <div class="list-group d-grid gap-2 border-0 lots-list">
-                            <li class="list-group-item d-flex justify-content-between align-items-center lot">
-                                Phone Number
-                                <a href="tel:555-555-5555" class="badge text-bg-primary rounded-pill lot-number flagg-badge">555-555-5555</a>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center lot">
-                                Email
-                                <a href="mailto:contact@brawa.com" class="badge text-bg-primary rounded-pill lot-number flagg-badge">contact@brawa.com</a>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center lot">
-                                Address
-                                <span class="badge rounded-pill lot-number closed">55 Test St, Santo Domingo, DR</span>
-                            </li>
-                        </div>
-                    </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">List Your Vehicle</h4>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title pricing-card-title">Your Terms, Our Platform</h3>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>No fees for listing.</li>
+                      <li>Reach potential buyers.</li>
+                      <li>Set your price and manage offers.</li>
+                      <li>Sell with confidence.</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">List your vehicle</button>
+                  </div>
                 </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">We Sell for You</h4>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title pricing-card-title">Let Us Do the Work</h3>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Send us your vehicle, we do the work.</li>
+                      <li>Small fee.</li>
+                      <li>Rely on our expertise to get you the best offer.</li>
+                      <li>Reach out online or by phone to get started.</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </section>
         <!-- Footer -->
         <section>
@@ -128,8 +151,8 @@
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
                             <li class="nav-item mb-2"><a href="./inventory.html" class="nav-link p-0 text-body-secondary">Inventory</a></li>
-                            <li class="nav-item mb-2"><a href="./sell.html" class="nav-link p-0 text-body-secondary">Sell</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sell</a></li>
+                            <li class="nav-item mb-2"><a href="./about.html" class="nav-link p-0 text-body-secondary">About</a></li>
                         </ul>
                         </div>
                 
