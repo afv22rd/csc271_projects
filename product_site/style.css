@@ -199,3 +199,7 @@ html {
 #home-main .card {
     display: block;
 }
+
+#vehicleCheckboxes, #priceRange {
+    display: none;
+}
