@@ -6,7 +6,7 @@ const posters = ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fww
 const altText = ["Scarface Movie Poster", "Dirty Dancing Movie Poster", "The Purge Movie Poster"];
 
 // Array of movie HTML links
-const links = ["scarface.html", "https://rileymaguire.rhody.dev/csc271/labs/lab8_uri_mdb-main/index.html", "the-purge.html"];
+const links = ["scarface.html", "https://rileymaguire.rhody.dev/csc271/labs/lab8_uri_mdb-main/dirty-dancing.html", "the-purge.html"];
 
 // Array of movie ratings
 const ratings = [5, 4, 3];
