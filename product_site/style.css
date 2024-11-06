@@ -82,7 +82,7 @@ html {
     line-height: 16px;
 }
 
-#appt-heading {
+#appt-button {
     display: inline-block;
     background-color: #354EF230;
     color: #1C2980;
@@ -123,22 +123,6 @@ html {
 .car-img {
     background-size: cover;
     background-position: center;
-}
-
-.inventory-1 {
-    background-image: url('./images/2014_e350.jpeg');
-}
-
-.inventory-2 {
-    background-image: url('./images/2017_accord.jpg');
-}
-
-.inventory-3 {
-    background-image: url('./images/2019_camry.jpg')
-}
-
-.inventory-4{
-    background-image: url('./images/2020_accord.jpg');
 }
 
 .bg-body-tertiary {

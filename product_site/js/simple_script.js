@@ -101,9 +101,4 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("confirmAppointment").addEventListener("click", function() {
         form.submit();  // Submit the form after confirmation
     });
-
-    // Use bootstrap hidden.bs.modal event to reset the form
-    appointmentModalElement.addEventListener('hide.bs.modal', function () {
-        form.reset(); // Reset all form fields
-    });
 });

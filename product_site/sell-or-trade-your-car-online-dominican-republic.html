@@ -74,10 +74,180 @@
                 <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">You will receive the best offer for your vehicle!</h1>
                 <p class="lead">Ready to sell? We make it simple and rewarding to get top dollar for your vehicle. Receive competitive offers quickly, with no hassle, and drive toward your next adventure.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Sell now</button>
+                  <button type="button" id="sell-button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#sell-form-modal">
+                    Sell now
+                  </button>
                   <a href="#sell-options">
                     <button type="button" class="btn btn-outline-secondary btn-lg px-4">How does it work?</button>
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-xl-start">
+            <div class="modal fade" id="sell-form-modal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="sell-form-modal-Label">Receive an offer in minutes!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <form action="./sell-or-trade-your-car-online-dominican-republic.html" method="GET">
+                      <!-- Name -->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        <label for="name">Name</label>
+                      </div>    
+                      <!-- Email -->                  
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        <label for="email">Email Address</label>
+                      </div>
+                      <!-- Number -->      
+                      <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                        <label for="phone">Phone Number</label>
+                      </div>
+                      <!-- Make -->
+                      <div class="mb-3">
+                        <label for="make" class="form-label">Make</label>
+                        <select class="form-select" aria-label="Default select example" id="make" name="make" required>
+                          <option selected>Select your vehicle make</option>
+                          <option value="Toyota">Toyota</option>
+                        </select>
+                      </div>
+                      <!-- Model -->
+                      <div class="mb-3">
+                        <label for="model" class="form-label">Model</label>
+                        <select class="form-select" aria-label="Default select example" id="model" name="model" required>
+                          <option selected>Select your vehicle model</option>
+                          <option value="Corolla">Corolla</option>
+                          <option value="Camry">Camry</option>
+                          <option value="Supra">Supra</option>
+                        </select>
+                      </div>
+                      <!-- Mileage -->
+                      <div class="mb-3">
+                        <label for="mileage" class="form-label">Mileage</label>
+                        <select class="form-select" aria-label="Default select example" id="mileage" name="mileage" required>
+                          <option selected>Select your vehicles' mileage</option>
+                          <option value="-10k">Less than 10K miles</option>
+                          <option value="-40k">Less than 40k miles</option>
+                          <option value="-75k">Less than 75k miles</option>
+                          <option value="-100k">Less than 100k miles</option>
+                          <option value="-150k">Less than 150k miles</option>
+                          <option value="+150k">More than 150k miles</option>
+                        </select>
+                      </div>
+                      <!-- Radio Buttons for vehicle condition -->
+                      <div class="mb-3">
+                        <label for="vehicle-condition" class="form-label">Is the vehicle new or used?</label>
+                        <div class="vehicle-condition">
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="vehicleCondition" id="is-new" value="true">
+                              <label class="form-check-label" for="is-new">New</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="vehicleCondition" id="is-used" value="false">
+                              <label class="form-check-label" for="is-used">Used</label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Title available -->
+                      <div class="mb-3 d-none title-available-section">
+                        <label for="title-available" class="form-label">Do you have the title?</label>
+                        <div class="title-available">
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="titleAvailable" id="title-true" value="true">
+                              <label class="form-check-label" for="title-true">Yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="titleAvailable" id="title-false" value="false">
+                              <label class="form-check-label" for="title-false">No</label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Clean or rebuilt title -->
+                      <div class="mb-3 d-none title-condition-section">
+                        <label for="title-available" class="form-label">Is the title clean, rebuilt or salvage?</label>
+                        <div class="title-condition">
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="titleCondition" id="clean-title" value="Clean">
+                              <label class="form-check-label" for="title-true">Clean</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="titleCondition" id="rebuilt-title" value="Rebuilt">
+                              <label class="form-check-label" for="title-false">Rebuilt</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="titleCondition" id="salvage-title" value="Salvage">
+                            <label class="form-check-label" for="title-false">Salvage</label>
+                        </div>
+                        </div>
+                      </div>
+                      <!-- Rebuilt reson -->
+                      <div class="mb-3 d-none rebuilt-reason-section">
+                        <label for="rebuilt-reason" class="form-label">Rebuilt reason</label>
+                        <div class="rebuilt-reason">
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="rebuiltReason" id="reasonFlood" value="Floodfire">
+                              <label class="form-check-label" for="reasonFlood">Flood or Fire</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="rebuiltReason" id="reasonAccident" value="Accident">
+                              <label class="form-check-label" for="reasonAccident">Accident</label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Airbags question -->
+                      <div class="mb-3 d-none airbags-section">
+                        <label for="airbags-question" class="form-label">Were the airbags deployed?</label>
+                        <div class="airbags-question">
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="airbagsQuestion" id="airbagsYes" value="true">
+                              <label class="form-check-label" for="airbagsYes">Yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="airbagsQuestion" id="airbagsNo" value="false">
+                              <label class="form-check-label" for="airbagsNo">No</label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Service date -->
+                      <div class="mb-3 d-none service-date-section">
+                        <label for="service-date" class="form-label">When was the last service date?</label>
+                        <select class="form-select" aria-label="Default select example" type="date" id="service-date" name="serviceDate" required>
+                          <option selected>Select an estimated date</option>
+                          <option value="1">Less than a month ago</option>
+                          <option value="2">Less than 3 months ago</option>
+                          <option value="3">Less than 6 months ago</option>
+                          <option value="4">Less than 9 months ago</option>
+                          <option value="5">Less than a year ago</option>
+                          <option value="6">+1 Year</option>
+                        </select>
+                      </div>
+                      <button type="submit" class="btn btn-primary" id="submitOfferButton" data-bs-toggle="modal" data-bs-target="#offerModal">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Offer Summary Modal -->
+            <div class="modal fade" id="offerModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Confirm Every Detail!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start" id="offerModalBodyContent">
+                    <!-- Summary content will be added with JavaScript -->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#sell-form-modal" id="backBtn-offerModal">Go Back</button>
+                    <button type="button" class="btn btn-primary" id="acceptOffer">Get My Offer</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -181,5 +351,6 @@
                 </footer>
             </div>
         </section>
+        <script src="./js/sell-form-script.js"></script>
     </body>
 </html>
