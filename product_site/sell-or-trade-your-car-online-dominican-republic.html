@@ -93,22 +93,37 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body text-start">
-                    <form action="./sell-or-trade-your-car-online-dominican-republic.html" method="GET">
+                    <form>
                       <!-- Name -->
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="name" placeholder="Name" required>
-                        <label for="name">Name</label>
-                      </div>    
-                      <!-- Email -->                  
-                      <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="Email" required>
-                        <label for="email">Email Address</label>
+                      <div class="input-group has-validation">
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="name" placeholder="Name" required>
+                          <label for="name">Name</label>
+                        </div>
+                        <div class="invalid-feedback input-fb">
+                          Please enter your full name.
+                        </div> 
                       </div>
-                      <!-- Number -->      
-                      <div class="form-floating mb-3">
-                        <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
-                        <label for="phone">Phone Number</label>
-                      </div>
+                      <!-- Email -->     
+                      <div class="input-group has-validation">
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control" id="email" placeholder="Email" required>
+                          <label for="email">Email Address</label>
+                        </div>
+                        <div class="invalid-feedback input-fb">
+                          Please enter a valid email address.
+                        </div>
+                      </div>             
+                      <!-- Number -->       
+                      <div class="input-group has-validation">
+                        <div class="form-floating mb-3">
+                          <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                          <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="invalid-feedback input-fb">
+                          Please enter a valid phone number.
+                        </div>
+                      </div>   
                       <!-- Make -->
                       <div class="mb-3">
                         <label for="make" class="form-label">Make</label>
@@ -227,7 +242,7 @@
                           <option value="6">+1 Year</option>
                         </select>
                       </div>
-                      <button type="submit" class="btn btn-primary" id="submitOfferButton" data-bs-toggle="modal" data-bs-target="#offerModal">Submit</button>
+                      <button type="submit" class="btn btn-primary" id="submitOfferButton">Submit</button>
                     </form>
                   </div>
                 </div>
@@ -252,6 +267,19 @@
               </div>
             </div>
           </div>
+          <!--Toast notification-->
+          <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <img src="./images/logo.png" width="50px" class="rounded me-2" alt="...">
+                <strong class="me-auto">Brawa</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                Thank you for submitting your vehicle information. We will contact you shortly with an offer.
+              </div>
+            </div>
+          </div>          
         </section>
         <!-- Sell options -->
         <section id="sell-options">
@@ -314,42 +342,41 @@
         </section>
         <!-- Footer -->
         <section>
-            <div class="divider"></div>
-            <div class="container">
-                <footer class="py-5">
-                    <div class="row">
-                        <div class="col-6 col-md-2 mb-3">
-                        <h5>Brawa</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="./buy-sell-trade-finance-vehicles-online.html" class="nav-link p-0 text-body-secondary">Home</a></li>
-                            <li class="nav-item mb-2"><a href="./buy-used-cars-online-dominican-republic.html" class="nav-link p-0 text-body-secondary">Inventory</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sell</a></li>
-                            <li class="nav-item mb-2"><a href="./best-car-dealership-dominican-republic.html" class="nav-link p-0 text-body-secondary">About</a></li>
-                        </ul>
-                        </div>
-                
-                        <div class="col-md-5 offset-md-1 mb-3">
-                        <form>
-                            <h5>Subscribe to our newsletter</h5>
-                            <p>Weekly updates of new and exciting cars.</p>
-                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                            <button class="btn btn-primary" type="button">Subscribe</button>
-                            </div>
-                        </form>
-                        </div>
+          <div class="divider"></div>
+          <div class="container">
+            <footer class="py-5">
+              <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                  <h5>Brawa</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="./buy-sell-trade-finance-vehicles-online.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="./buy-used-cars-online-dominican-republic.html" class="nav-link p-0 text-body-secondary">Inventory</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sell</a></li>
+                    <li class="nav-item mb-2"><a href="./best-car-dealership-dominican-republic.html" class="nav-link p-0 text-body-secondary">About</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-md-5 offset-md-1 mb-3">
+                  <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Weekly updates of new and exciting cars.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-primary" type="button">Subscribe</button>
                     </div>
-                
-                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                        <p>© 2024 Brawa Auto Imports. All rights reserved.</p>
-                        <ul class="list-unstyled d-flex">
-                        <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/brawa_autoimport_/" target="_blank"><img src="./images/instagram.png" class="bi" width="24" height="24" alt="Instagram logo"></a></li>
-                        <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/brawaautoimport/" target="_blank"><img src="./images/facebook.png" class="bi" width="24" height="24" alt="Facebook logo"></a></li>
-                        </ul>
-                    </div>
-                </footer>
-            </div>
+                  </form>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                  <p>© 2024 Brawa Auto Imports. All rights reserved.</p>
+                  <ul class="list-unstyled d-flex">
+                  <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/brawa_autoimport_/" target="_blank"><img src="./images/instagram.png" class="bi" width="24" height="24" alt="Instagram logo"></a></li>
+                  <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/brawaautoimport/" target="_blank"><img src="./images/facebook.png" class="bi" width="24" height="24" alt="Facebook logo"></a></li>
+                  </ul>
+                </div>
+            </footer>
+          </div>
         </section>
         <script src="./js/sell-form-script.js"></script>
     </body>
