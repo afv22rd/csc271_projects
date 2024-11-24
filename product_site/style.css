@@ -187,3 +187,7 @@ html {
 #vehicleCheckboxes, #priceRange {
     display: none;
 }
+
+.bg-secondary {
+    background-color: rgba(242, 104, 53, 0.05) !important;
+}
