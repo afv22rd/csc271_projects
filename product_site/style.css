@@ -2,12 +2,8 @@ html {
     scroll-behavior: smooth;
 }
 
-:root {
-    --main-orange: 24, 69, 184;
-    --dark-orange: 
-}
-
 .bg-nav-bar {
+    --main-orange: 24, 69, 184;
     background-color: RGBA(var(--main-orange),var(--bs-bg-opacity,1)) !important;
   }
 
