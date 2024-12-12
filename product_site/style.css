@@ -2,10 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
-.bg-nav-bar {
-    --main-orange: 24, 69, 184;
-    background-color: RGBA(var(--main-orange),var(--bs-bg-opacity,1)) !important;
-  }
+.text-bg-dark {
+    --bg-blue: 53, 78, 242;
+    background-color: RGBA(var(--bg-blue),var(--bs-bg-opacity,1)) !important;
+}
 
 .nav-link {
     color: #0D0D0D;
