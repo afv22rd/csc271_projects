@@ -50,7 +50,7 @@
             </div>
           </div>
 
-          <div class="px-3 py-2 text-bg-dark">
+          <div class="px-3 py-2 bg-nav-bar">
             <div class="container d-flex flex-wrap justify-content-center">
               <form class="col-12 col-lg-5 mb-2 mb-lg-0 me-lg-auto" role="search">
                 <input type="search" class="form-control" placeholder="Search Make, Model or Keyword" aria-label="Search">
@@ -58,7 +58,7 @@
 
               <div class="text-end">
                 <button type="button" class="btn btn-light text-dark me-2">Login</button>
-                <button type="button" class="btn btn-primary">Sign-up</button>
+                <button type="button" class="btn nav-btn">Sign-up</button>
               </div>
             </div>
           </div>
@@ -82,11 +82,11 @@
               <h2 class="border-bottom pb-2">Visit Us</h2>
               <div class="d-flex flex-column flex-lg-row py-md-5 py-4 gap-4 gap-xl-0 align-items-center">
                   <div class="col-12 col-lg-6 image-container">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7932728912733!2d-69.81940639999999!3d18.493020899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf87e791a264f5%3A0x99052b78f5bec6!2sBRAWA%20AUTOIMPORT%20SRL!5e0!3m2!1sen!2sus!4v1728937553969!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7932728912733!2d-69.81940639999999!3d18.493020899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf87e791a264f5%3A0x99052b78f5bec6!2sBRAWA%20AUTOIMPORT%20SRL!5e0!3m2!1sen!2sus!4v1728937553969!5m2!1sen!2sus" style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                   </div>
                   <div class="order-first order-lg-last col-12 col-lg-6 ps-0 ps-lg-5">
                       <p id="hours-heading" class="fw-bold fs-6 text-center py-2 px-3 mt-0">Hours of operation</p>
-                      <div class="list-group d-grid gap-2 border-0 lots-list">
+                      <ul class="list-group d-grid gap-2 border-0 lots-list">
                           <li class="list-group-item d-flex justify-content-between align-items-center lot">
                               Monday - Friday
                               <span class="badge text-bg-primary rounded-pill lot-number flagg-badge">9 AM - 6 PM</span>
@@ -99,9 +99,9 @@
                               Sunday
                               <span class="badge rounded-pill lot-number closed">CLOSED</span>
                           </li>
-                      </div>
+                      </ul>
                       <p id="contact-heading" class="fw-bold fs-6 text-center py-2 px-3 mt-3">Contact</p>
-                      <div class="list-group d-grid gap-2 border-0 lots-list">
+                      <ul class="list-group d-grid gap-2 border-0 lots-list">
                           <li class="list-group-item d-flex justify-content-between align-items-center lot">
                               Phone Number
                               <a href="tel:555-555-5555" class="badge text-bg-primary rounded-pill lot-number flagg-badge">555-555-5555</a>
@@ -114,7 +114,7 @@
                               Address
                               <span class="badge rounded-pill lot-number closed">55 Test St, Santo Domingo, DR</span>
                           </li>
-                      </div>
+                        </ul>
                       <div class="text-center text-xl-start">
                           <!-- Appointment button -->
                           <button type="button" id="appt-button" class="fw-bold fs-6 text-center py-2 px-3 mt-3" data-bs-toggle="modal" data-bs-target="#appointmentModal">
@@ -154,7 +154,7 @@
                                     <!-- Radio buttons for yes or no options -->
                                     <div class="mb-3">
                                       <label for="specific-vehicle" class="form-label">Are you interested in a specific vehicle from our lot?</label>
-                                      <div>
+                                      <div id="specific-vehicle">
                                           <div class="form-check form-check-inline">
                                               <input class="form-check-input" type="radio" name="vehicleOptions" id="vehicleYes" value="yes">
                                               <label class="form-check-label" for="vehicleYes">Yes</label>
@@ -190,21 +190,19 @@
                                       </div>
                                     </div>
 
-                                    <!-- Slider for 'No' Selection -->
+                                    <!-- Dropdown for 'No' Selection -->
                                     <div id="priceRange" class="mb-3">
-                                      <label for="priceRangeBar" class="form-label">Select your price range</label>
-                                      <input type="range" class="form-range" min="0" max="5" step="1" id="priceRangeBar">
-                                  
-                                      <!-- Label for Each Range Position -->
-                                      <div class="d-flex justify-content-between">
-                                          <span>$0 - $5,000</span>
-                                          <span>$10,000</span>
-                                          <span>$15,000</span>
-                                          <span>Default</span>
-                                          <span>$20,000</span>
-                                          <span>+$25,000</span>
-                                      </div>
-                                      <div id="selectionHelp" class="form-text">Drag the slider to set your price range, or leave it at the default position.</div>
+                                      <label for="priceRangeDropdown" class="form-label">Select your price range</label>
+                                      <select class="form-select" aria-label="Default select example" id="priceRangeDropdown" name="priceRange" required>
+                                      <option value="" selected>Select a price range</option>
+                                      <option value="1">$0 - $5,000</option>
+                                      <option value="2">$5,000 - $10,000</option>
+                                      <option value="3">$10,000 - $15,000</option>
+                                      <option value="4">$15,000 - $20,000</option>
+                                      <option value="5">$20,000 - $25,000</option>
+                                      <option value="6">$25,000+</option>
+                                      </select>
+                                      <div id="selectionHelp2" class="form-text">Select your desired price range from the dropdown menu.</div>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                   </form>
@@ -238,42 +236,39 @@
         </section>
         <!-- Footer -->
         <section>
-            <div class="divider"></div>
-            <div class="container">
-                <footer class="py-5">
-                    <div class="row">
-                        <div class="col-6 col-md-2 mb-3">
-                        <h5>Brawa</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="./buy-sell-trade-finance-vehicles-online.html" class="nav-link p-0 text-body-secondary">Home</a></li>
-                            <li class="nav-item mb-2"><a href="./buy-used-cars-online-dominican-republic.html" class="nav-link p-0 text-body-secondary">Inventory</a></li>
-                            <li class="nav-item mb-2"><a href="./sell-or-trade-your-car-online-dominican-republic.html" class="nav-link p-0 text-body-secondary">Sell</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-                        </ul>
-                        </div>
-                
-                        <div class="col-md-5 offset-md-1 mb-3">
-                        <form>
-                            <h5>Subscribe to our newsletter</h5>
-                            <p>Weekly updates of new and exciting cars.</p>
-                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                            <button class="btn btn-primary" type="button">Subscribe</button>
-                            </div>
-                        </form>
-                        </div>
-                    </div>
-                
-                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                        <p>© 2024 Brawa Auto Imports. All rights reserved.</p>
-                        <ul class="list-unstyled d-flex">
-                        <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/brawa_autoimport_/" target="_blank"><img src="./images/instagram.png" class="bi" width="24" height="24" alt="Instagram logo"></a></li>
-                        <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/brawaautoimport/" target="_blank"><img src="./images/facebook.png" class="bi" width="24" height="24" alt="Facebook logo"></a></li>
-                        </ul>
-                    </div>
-                </footer>
-            </div>
+          <div class="divider"></div>
+          <div class="container">
+            <footer class="py-5">
+              <div class="row">
+                  <div class="col-6 col-md-2 mb-3">
+                    <h5>Brawa</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="./buy-sell-trade-finance-vehicles-online.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+                      <li class="nav-item mb-2"><a href="./buy-used-cars-online-dominican-republic.html" class="nav-link p-0 text-body-secondary">Inventory</a></li>
+                      <li class="nav-item mb-2"><a href="./sell-or-trade-your-car-online-dominican-republic.html" class="nav-link p-0 text-body-secondary">Sell</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                  </div>
+          
+                  <div class="col-md-5 offset-md-1 mb-3">
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Weekly updates of new and exciting cars.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-primary" type="button">Subscribe</button>
+                  </div>
+          
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                  <p>© 2024 Brawa Auto Imports. All rights reserved.</p>
+                  <ul class="list-unstyled d-flex">
+                  <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/brawa_autoimport_/" target="_blank"><img src="./images/instagram.png" class="bi" width="24" height="24" alt="Instagram logo"></a></li>
+                  <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/brawaautoimport/" target="_blank"><img src="./images/facebook.png" class="bi" width="24" height="24" alt="Facebook logo"></a></li>
+                  </ul>
+                </div>
+              </div> 
+            </footer>
+          </div>
         </section>
         <!-- JavaScript -->
         <script src="./js/simple_script.js"></script>

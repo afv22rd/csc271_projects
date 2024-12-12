@@ -57,28 +57,30 @@ document.addEventListener("DOMContentLoaded", function() {
             // Join selected vehicles to the appointment details. If selectedVehicles is empty, join "None selected"
             appointmentDetails += `<p><strong>Vehicles selected:</strong> ${selectedVehicles.length}<br> ${selectedVehicles.length ? selectedVehicles.join("<br>") : "None selected"}</p>`;
         } else {
-            // Get price range value depending on where the bar is set
-            const priceRangeValue = document.getElementById("priceRangeBar").value;
+            // Get price range value depending on where the dropdown is set
+            const priceRangeValue = document.getElementById("priceRangeDropdown").value;
             let priceRangeText;
             switch (priceRangeValue) {
-                case "0":
+                case "1":
                     priceRangeText = "$0 - $5,000";
                     break;
-                case "1":
+                case "2":
                     priceRangeText = "$5,000 - $10,000";
                     break;
-                case "2":
+                case "3":
                     priceRangeText = "$10,000 - $15,000";
                     break;
-                case "3":
-                    priceRangeText = "Default - All vehicles";
-                    break;
                 case "4":
-                    priceRangeText = "$20,000 - $25,000";
+                    priceRangeText = "$15,000 - $20,000";
                     break;
                 case "5":
+                    priceRangeText = "$20,000 - $25,000";
+                    break;
+                case "6":
                     priceRangeText = "$25,000+";
                     break;
+                default:
+                    priceRangeText = "Not selected";
             }
             // Add price range to appointment details
             appointmentDetails += `<p><strong>Price Range:</strong> ${priceRangeText}</p>`;
