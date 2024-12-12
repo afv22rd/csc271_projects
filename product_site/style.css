@@ -3,12 +3,12 @@ html {
 }
 
 :root {
-    --bs-dark-orange: #80371C;
+    --main-orange: 24, 69, 184;
+    --dark-orange: 
 }
 
-.text-bg-dark {
-    --bg-blue: 53, 78, 242;
-    background-color: RGBA(var(--bg-blue),var(--bs-bg-opacity,1)) !important;
+.bg-nav-bar {
+    background-color: RGBA(var(--main-orange),var(--bs-bg-opacity,1)) !important;
   }
 
 .nav-link {
@@ -38,6 +38,24 @@ html {
     --bs-btn-hover-bg: #CF582D;
     --bs-btn-hover-border-color: #CF582D;
 }
+
+.nav-btn {
+    color: rgb(255, 255, 255);
+    --bs-btn-bg: #f26835;
+    --bs-btn-border-color: #f26835;
+    --bs-btn-hover-bg: #CF582D;
+    --bs-btn-hover-border-color: #CF582D;
+}
+
+.nav-btn:focus {
+    --bs-btn-focus-shadow-rgb: 211,212,213;
+  }
+
+.form-control:focus {
+    box-shadow: 0 0 0 .25rem rgba(211,212,213,.50);
+}
+  
+
 .carousel-item {
     height: 60vh;
 }
