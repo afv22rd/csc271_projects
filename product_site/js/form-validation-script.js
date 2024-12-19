@@ -167,6 +167,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
         return formFields;
     }
-
-    const formFields = formValidation();
+    formValidation();
 });
