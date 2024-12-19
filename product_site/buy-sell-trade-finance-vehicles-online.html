@@ -206,7 +206,7 @@
                   </button>
 
                   <!-- Appointment modal -->
-                  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -214,19 +214,37 @@
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body text-start">
-                          <form action="./buy-sell-trade-finance-vehicles-online.html" method="GET">
-                            <div class="mb-3">
-                              <label for="name" class="form-label">Name</label>
-                              <input type="text" class="form-control" id="name" name="name" required>
+                          <form>
+                            <!-- Name -->
+                            <div class="input-group has-validation">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                <label for="name">Name</label>
+                              </div>
+                              <div class="invalid-feedback input-fb">
+                                Please enter your full name.
+                              </div> 
                             </div>
-                            <div class="mb-3">
-                              <label for="email" class="form-label">Email</label>
-                              <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="mb-3">
-                              <label for="phone" class="form-label">Phone</label>
-                              <input type="tel" class="form-control" id="phone" name="phone" required>
-                            </div>
+                            <!-- Email -->     
+                            <div class="input-group has-validation">
+                              <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                <label for="email">Email Address</label>
+                              </div>
+                              <div class="invalid-feedback input-fb">
+                                Please enter a valid email address.
+                              </div>
+                            </div>             
+                            <!-- Number -->       
+                            <div class="input-group has-validation">
+                              <div class="form-floating mb-3">
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                                <label for="phone">Phone Number</label>
+                              </div>
+                              <div class="invalid-feedback input-fb">
+                                Please enter a valid phone number.
+                              </div>
+                            </div>   
                             <div class="mb-3">
                               <label for="date" class="form-label">Date</label>
                               <input type="date" class="form-control" id="date" name="date" required>
@@ -288,14 +306,14 @@
                               </select>
                               <div id="selectionHelp2" class="form-text">Select your desired price range from the dropdown menu.</div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" id="submitAppointment">Submit</button>
                           </form>
                         </div>
                       </div>
                       </div>
                     </div>
                       <!-- Appointment Summary Modal -->
-                      <div class="modal fade" id="summaryModal" tabindex="-1" aria-hidden="true">
+                      <div class="modal fade" id="summaryModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -306,12 +324,26 @@
                               <!-- Summary content will be added with JavaScript -->
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="backBtn-summaryModal">Go Back</button>
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="backBtn-summaryModal" data-bs-toggle="modal" data-bs-target="#appointmentModal">Go Back</button>
                               <button type="button" class="btn btn-primary" id="confirmAppointment">Confirm Appointment</button>
                             </div>
                           </div>
                         </div>
                       </div>
+
+                      <!--Toast notification-->
+                      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                          <div class="toast-header">
+                            <img src="./images/logo.png" width="50" class="rounded me-2" alt="Brawa Logo">
+                            <strong class="me-auto">Brawa</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                          </div>
+                          <div class="toast-body">
+                            Thank you for making an appointment with us. You will receive an email confirmation with all the details.
+                          </div>
+                        </div>
+                      </div> 
                   </div>
               </div>
           </div>

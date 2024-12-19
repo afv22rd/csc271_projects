@@ -122,113 +122,144 @@
                           </button>
   
                           <!-- Appointment modal -->
-                          <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Make an appointment</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body text-start">
-                                  <form action="./buy-sell-trade-finance-vehicles-online.html" method="GET">
-                                    <div class="mb-3">
-                                      <label for="name" class="form-label">Name</label>
-                                      <input type="text" class="form-control" id="name" name="name" required>
-                                    </div>
-                                    <div class="mb-3">
-                                      <label for="email" class="form-label">Email</label>
-                                      <input type="email" class="form-control" id="email" name="email" required>
-                                    </div>
-                                    <div class="mb-3">
-                                      <label for="phone" class="form-label">Phone</label>
-                                      <input type="tel" class="form-control" id="phone" name="phone" required>
-                                    </div>
-                                    <div class="mb-3">
-                                      <label for="date" class="form-label">Date</label>
-                                      <input type="date" class="form-control" id="date" name="date" required>
-                                    </div>
-                                    <div class="mb-3">
-                                      <label for="time" class="form-label">Time</label>
-                                      <input type="time" class="form-control" id="time" name="time" required>
-                                    </div>
-                                    <!-- Radio buttons for yes or no options -->
-                                    <div class="mb-3">
-                                      <label for="specific-vehicle" class="form-label">Are you interested in a specific vehicle from our lot?</label>
-                                      <div id="specific-vehicle">
-                                          <div class="form-check form-check-inline">
-                                              <input class="form-check-input" type="radio" name="vehicleOptions" id="vehicleYes" value="yes">
-                                              <label class="form-check-label" for="vehicleYes">Yes</label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                              <input class="form-check-input" type="radio" name="vehicleOptions" id="vehicleNo" value="no">
-                                              <label class="form-check-label" for="vehicleNo">No</label>
-                                          </div>
-                                          <div id="selectionHelp" class="form-text">Select 'Yes' to choose from available vehicles or 'No' to select the price range of what you're looking for.</div>
-                                      </div>
-                                    </div>
-
-                                    <!-- Dropdown Menu for 'Yes' -->
-                                    <div id="vehicleCheckboxes" class="mb-3">
-                                      <label class="form-label">Select the vehicles you're interested in:</label>
-                                      
-                                      <!-- List of vehicles available-->
-                                      <div class="form-check">
-                                          <input class="form-check-input" type="checkbox" value="2014 Mercedes-Benz E-Class | E350 4MATIC" id="vehicle1">
-                                          <label class="form-check-label" for="vehicle1">2014 Mercedes-Benz E-Class | E350 4MATIC</label>
-                                      </div>
-                                      <div class="form-check">
-                                          <input class="form-check-input" type="checkbox" value="2017 Honda Accord | Touring V6" id="vehicle2">
-                                          <label class="form-check-label" for="vehicle2">2017 Honda Accord | Touring V6</label>
-                                      </div>
-                                      <div class="form-check">
-                                          <input class="form-check-input" type="checkbox" value="2019 Toyota Camry | XSE V6" id="vehicle3">
-                                          <label class="form-check-label" for="vehicle3">2019 Toyota Camry | XSE V6</label>
-                                      </div>
-                                      <div class="form-check">
-                                          <input class="form-check-input" type="checkbox" value="2020 Honda Accord | 2.0T Sport" id="vehicle4">
-                                          <label class="form-check-label" for="vehicle4">2020 Honda Accord | 2.0T Sport</label>
-                                      </div>
-                                    </div>
-
-                                    <!-- Dropdown for 'No' Selection -->
-                                    <div id="priceRange" class="mb-3">
-                                      <label for="priceRangeDropdown" class="form-label">Select your price range</label>
-                                      <select class="form-select" aria-label="Default select example" id="priceRangeDropdown" name="priceRange" required>
-                                      <option value="" selected>Select a price range</option>
-                                      <option value="1">$0 - $5,000</option>
-                                      <option value="2">$5,000 - $10,000</option>
-                                      <option value="3">$10,000 - $15,000</option>
-                                      <option value="4">$15,000 - $20,000</option>
-                                      <option value="5">$20,000 - $25,000</option>
-                                      <option value="6">$25,000+</option>
-                                      </select>
-                                      <div id="selectionHelp2" class="form-text">Select your desired price range from the dropdown menu.</div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                  </form>
-                                </div>
+                  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Make an appointment</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-start">
+                          <form>
+                            <!-- Name -->
+                            <div class="input-group has-validation">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                <label for="name">Name</label>
+                              </div>
+                              <div class="invalid-feedback input-fb">
+                                Please enter your full name.
+                              </div> 
+                            </div>
+                            <!-- Email -->     
+                            <div class="input-group has-validation">
+                              <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                <label for="email">Email Address</label>
+                              </div>
+                              <div class="invalid-feedback input-fb">
+                                Please enter a valid email address.
+                              </div>
+                            </div>             
+                            <!-- Number -->       
+                            <div class="input-group has-validation">
+                              <div class="form-floating mb-3">
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                                <label for="phone">Phone Number</label>
+                              </div>
+                              <div class="invalid-feedback input-fb">
+                                Please enter a valid phone number.
+                              </div>
+                            </div>   
+                            <div class="mb-3">
+                              <label for="date" class="form-label">Date</label>
+                              <input type="date" class="form-control" id="date" name="date" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="time" class="form-label">Time</label>
+                              <input type="time" class="form-control" id="time" name="time" required>
+                            </div>
+                            <!-- Radio Buttons for Selection -->
+                            <div class="mb-3">
+                              <label for="specific-vehicle" class="form-label">Are you interested in a specific vehicle from our lot?</label>
+                              <div id="specific-vehicle">
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="vehicleOptions" id="vehicleYes" value="yes">
+                                      <label class="form-check-label" for="vehicleYes">Yes</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="vehicleOptions" id="vehicleNo" value="no">
+                                      <label class="form-check-label" for="vehicleNo">No</label>
+                                  </div>
+                                  <div id="selectionHelp1" class="form-text">Select ‘Yes’ to choose from available vehicles or ‘No’ to select the price range of what you're looking for.</div>
                               </div>
                             </div>
-                            
+
+                            <!-- Dropdown Menu for 'Yes' -->
+                            <div id="vehicleCheckboxes" class="mb-3">
+                              <label class="form-label">Select the vehicles you're interested in:</label>
+                              
+                              <!-- List of Checkboxes for Multiple Selection -->
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="2014 Mercedes-Benz E-Class | E350 4MATIC" id="vehicle1">
+                                  <label class="form-check-label" for="vehicle1">2014 Mercedes-Benz E-Class | E350 4MATIC</label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="2017 Honda Accord | Touring V6" id="vehicle2">
+                                  <label class="form-check-label" for="vehicle2">2017 Honda Accord | Touring V6</label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="2019 Toyota Camry | XSE V6" id="vehicle3">
+                                  <label class="form-check-label" for="vehicle3">2019 Toyota Camry | XSE V6</label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="2020 Honda Accord | 2.0T Sport" id="vehicle4">
+                                  <label class="form-check-label" for="vehicle4">2020 Honda Accord | 2.0T Sport</label>
+                              </div>
+                            </div>
+
+                            <!-- Dropdown for 'No' Selection -->
+                            <div id="priceRange" class="mb-3">
+                              <label for="priceRangeDropdown" class="form-label">Select your price range</label>
+                              <select class="form-select" aria-label="Default select example" id="priceRangeDropdown" name="priceRange" required>
+                                <option value="" selected>Select a price range</option>
+                                <option value="1">$0 - $5,000</option>
+                                <option value="2">$5,000 - $10,000</option>
+                                <option value="3">$10,000 - $15,000</option>
+                                <option value="4">$15,000 - $20,000</option>
+                                <option value="5">$20,000 - $25,000</option>
+                                <option value="6">$25,000+</option>
+                              </select>
+                              <div id="selectionHelp2" class="form-text">Select your desired price range from the dropdown menu.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submitAppointment">Submit</button>
+                          </form>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                      <!-- Appointment Summary Modal -->
+                      <div class="modal fade" id="summaryModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Appointment Summary</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-start" id="modalBodyContent">
+                              <!-- Summary content will be added with JavaScript -->
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="backBtn-summaryModal" data-bs-toggle="modal" data-bs-target="#appointmentModal">Go Back</button>
+                              <button type="button" class="btn btn-primary" id="confirmAppointment">Confirm Appointment</button>
+                            </div>
                           </div>
-                          <!-- Appointment Summary Modal -->
-                            <div class="modal fade" id="summaryModal" tabindex="-1" aria-hidden="true">
-                              <div class="modal-dialog">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h5 class="modal-title">Appointment Summary</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body text-start" id="modalBodyContent">
-                                    <!-- Summary content will be added with JavaScript -->
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="backBtn-summaryModal">Go Back</button>
-                                    <button type="button" class="btn btn-primary" id="confirmAppointment">Confirm Appointment</button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                        </div>
+                      </div>
+
+                      <!--Toast notification-->
+                      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                          <div class="toast-header">
+                            <img src="./images/logo.png" width="50" class="rounded me-2" alt="Brawa Logo">
+                            <strong class="me-auto">Brawa</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                          </div>
+                          <div class="toast-body">
+                            Thank you for making an appointment with us. You will receive an email confirmation with all the details.
+                          </div>
+                        </div>
+                      </div>
                       </div>
                   </div>
               </div>
